@@ -46,9 +46,7 @@ const Navbar = () => {
                   key={item.label}
                   href={item.href}
                   className={`cursor-pointer relative z-20 flex items-center justify-center h-12 px-6 rounded-[20px] transition-all duration-300 pointer-events-auto ${
-                    activeIndex === index
-                      ? "gradient-text"
-                      : "text-white hover:text-gray-300"
+                    activeIndex === index ? "gradient-text" : "text-white hover:text-gray-300"
                   }`}
                   onClick={() => setActiveIndex(index)}
                 >

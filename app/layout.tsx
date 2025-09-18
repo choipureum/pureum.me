@@ -18,10 +18,7 @@ export default function RootLayout({
     <html lang="ko" className={pretendard.variable}>
       <body className={`bg-primary ${pretendard.className}`}>
         <main className="min-h-screen relative bg-primary">
-          <div
-            className="fixed inset-0 w-full h-full"
-            style={{ filter: "brightness(0.6)" }}
-          >
+          <div className="fixed inset-0 w-full h-full" style={{ filter: "brightness(0.6)" }}>
             <Prism
               animationType="rotate"
               timeScale={0.5}

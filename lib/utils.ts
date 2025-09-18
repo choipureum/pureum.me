@@ -9,8 +9,7 @@ export function calculateYearsOfExperience(): number {
   const currentDate = new Date();
   const yearsOfExperience = currentDate.getFullYear() - startDate.getFullYear();
 
-  const adjustedYears =
-    currentDate.getMonth() < 10 ? yearsOfExperience - 1 : yearsOfExperience;
+  const adjustedYears = currentDate.getMonth() < 10 ? yearsOfExperience - 1 : yearsOfExperience;
 
   return adjustedYears + 1;
 }
