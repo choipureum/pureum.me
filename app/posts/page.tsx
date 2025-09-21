@@ -1,4 +1,9 @@
+"use client";
+
+import { useId } from "react";
+
 export default function Posts() {
+  const uniqueId = useId();
   const posts = [
     {
       title: "첫 번째 포스트",
@@ -26,7 +31,7 @@ export default function Posts() {
       <div className="space-y-8">
         {posts.map((post, index) => (
           <article
-            key={index}
+            key={`${uniqueId}-post-${index}-${post.slug}`}
             className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
           >
             <h2 className="text-2xl font-semibold text-gray-900 mb-3">

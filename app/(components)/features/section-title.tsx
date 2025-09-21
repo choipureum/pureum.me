@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useId } from "react";
 
 interface SectionTitleProps {
   title: string;
@@ -15,6 +16,7 @@ export default function SectionTitle({
   className = "",
   highlightText,
 }: SectionTitleProps) {
+  const uniqueId = useId();
   return (
     <div className={`text-center ${className}`}>
       <motion.h1
@@ -28,9 +30,10 @@ export default function SectionTitle({
       >
         {title.split(" ").map((word, index) => {
           const isHighlighted = highlightText && word.includes(highlightText);
+          const uniqueKey = `${uniqueId}-word-${index}-${word}`;
           return (
             <motion.span
-              key={index}
+              key={uniqueKey}
               initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
               animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
               transition={{
@@ -38,7 +41,9 @@ export default function SectionTitle({
                 delay: index * 0.1,
                 ease: "easeInOut",
               }}
-              className={`mr-2 inline-block ${isHighlighted ? "gradient-text" : ""}`}
+              className={`mr-2 inline-block ${
+                isHighlighted ? "gradient-text" : ""
+              }`}
             >
               {word}
             </motion.span>
@@ -54,7 +59,7 @@ export default function SectionTitle({
             duration: 0.6,
             delay: 1,
           }}
-          className="relative z-10 mx-auto max-w-2xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+          className="relative z-10 mx-auto max-w-2xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-300"
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
       )}

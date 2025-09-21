@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState, useId, type ReactNode } from "react";
+"use client";
+
+import { type ReactNode, useEffect, useId, useRef, useState } from "react";
 
 export interface GlassSurfaceProps {
   children?: ReactNode;
@@ -66,8 +68,8 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   borderWidth = 0.07,
   brightness = 50,
   opacity = 0.93,
-  blur = 11,
-  displace = 0,
+  blur = 25,
+  displace = 5,
   backgroundOpacity = 0,
   saturation = 1,
   distortionScale = -180,
@@ -80,10 +82,11 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   className = "",
   style = {},
 }) => {
+  const [mounted, setMounted] = useState(false);
   const uniqueId = useId().replace(/:/g, "-");
-  const filterId = `glass-filter-${uniqueId}`;
-  const redGradId = `red-grad-${uniqueId}`;
-  const blueGradId = `blue-grad-${uniqueId}`;
+  const filterId = mounted ? `glass-filter-${uniqueId}` : "glass-filter-ssr";
+  const redGradId = mounted ? `red-grad-${uniqueId}` : "red-grad-ssr";
+  const blueGradId = mounted ? `blue-grad-${uniqueId}` : "blue-grad-ssr";
 
   const containerRef = useRef<HTMLDivElement>(null);
   const feImageRef = useRef<SVGFEImageElement>(null);
@@ -93,6 +96,11 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   const gaussianBlurRef = useRef<SVGFEGaussianBlurElement>(null);
 
   const isDarkMode = useDarkMode();
+
+  // Hydration mismatch 방지를 위한 마운트 상태 설정
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const generateDisplacementMap = () => {
     const rect = containerRef.current?.getBoundingClientRect();
@@ -115,9 +123,11 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
         <rect x="0" y="0" width="${actualWidth}" height="${actualHeight}" fill="black"></rect>
         <rect x="0" y="0" width="${actualWidth}" height="${actualHeight}" rx="${borderRadius}" fill="url(#${redGradId})" />
         <rect x="0" y="0" width="${actualWidth}" height="${actualHeight}" rx="${borderRadius}" fill="url(#${blueGradId})" style="mix-blend-mode: ${mixBlendMode}" />
-        <rect x="${edgeSize}" y="${edgeSize}" width="${actualWidth - edgeSize * 2}" height="${
-          actualHeight - edgeSize * 2
-        }" rx="${borderRadius}" fill="hsl(0 0% ${brightness}% / ${opacity})" style="filter:blur(${blur}px)" />
+        <rect x="${edgeSize}" y="${edgeSize}" width="${
+      actualWidth - edgeSize * 2
+    }" height="${
+      actualHeight - edgeSize * 2
+    }" rx="${borderRadius}" fill="hsl(0 0% ${brightness}% / ${opacity})" style="filter:blur(${blur}px)" />
       </svg>
     `;
 
@@ -136,7 +146,10 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
       { ref: blueChannelRef, offset: blueOffset },
     ].forEach(({ ref, offset }) => {
       if (ref.current) {
-        ref.current.setAttribute("scale", (distortionScale + offset).toString());
+        ref.current.setAttribute(
+          "scale",
+          (distortionScale + offset).toString()
+        );
         ref.current.setAttribute("xChannelSelector", xChannel);
         ref.current.setAttribute("yChannelSelector", yChannel);
       }
@@ -196,7 +209,8 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   const supportsSVGFilters = () => {
     if (typeof window === "undefined") return false;
 
-    const isWebkit = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+    const isWebkit =
+      /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
     const isFirefox = /Firefox/.test(navigator.userAgent);
 
     if (isWebkit || isFirefox) {
@@ -388,7 +402,11 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
 
             <feBlend in="red" in2="green" mode="screen" result="rg" />
             <feBlend in="rg" in2="blue" mode="screen" result="output" />
-            <feGaussianBlur ref={gaussianBlurRef} in="output" stdDeviation="0.7" />
+            <feGaussianBlur
+              ref={gaussianBlurRef}
+              in="output"
+              stdDeviation="5"
+            />
           </filter>
         </defs>
       </svg>

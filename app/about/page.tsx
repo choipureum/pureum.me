@@ -1,50 +1,133 @@
+"use client";
+
+import GlassSurface from "@/app/(components)/animations/GlassSurface";
+import ScrollFloat from "@/app/(components)/animations/ScrollFloat";
+import { calculateDuration, formatDate } from "@/lib/utils";
+import { motion } from "motion/react";
+import { useId } from "react";
+
 export default function About() {
+  const uniqueId = useId();
+
+  const experiences = [
+    {
+      company: "NCSOFT",
+      logo: "/ncsoft.jpeg",
+      position: "Frontend Developer",
+      teams: [
+        {
+          name: "인사이트플랫폼개발팀",
+          startDate: new Date("2024-07-01"),
+          endDate: null, // 현재 재직 중
+        },
+        {
+          name: "마케팅 서비스팀",
+          startDate: new Date("2022-06-01"),
+          endDate: new Date("2024-07-01"),
+        },
+      ],
+      startDate: new Date("2022-06-01"),
+      endDate: null, // 현재 재직 중
+    },
+    {
+      company: "iMBC",
+      logo: "/imbc.jpeg",
+      position: "Web Developer",
+      teams: [
+        {
+          name: "시스템 개발팀",
+          startDate: new Date("2020-11-01"),
+          endDate: new Date("2022-06-01"),
+        },
+      ],
+      startDate: new Date("2020-11-01"),
+      endDate: new Date("2022-06-01"),
+    },
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">소개</h1>
-        <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-          저에 대해 알아보세요.
-        </p>
+    <div id="career" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="text-center mb-16">
+        <ScrollFloat
+          animationDuration={0.6}
+          ease="power2.out"
+          scrollStart="top bottom-=200px"
+          scrollEnd="center center"
+          stagger={0.05}
+          textClassName="text-4xl font-bold text-white mb-4"
+        >
+          Career
+        </ScrollFloat>
       </div>
 
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <div className="prose max-w-none">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">안녕하세요! 👋</h2>
-          <p className="text-gray-600 mb-6">
-            저는 개발자 최푸름입니다. 웹 개발과 기술에 대한 열정을 가지고 있으며, 지속적으로
-            학습하고 성장하고 있습니다.
-          </p>
+      <div className="space-y-8">
+        {experiences.map((exp, index) => (
+          <motion.div
+            key={`${uniqueId}-experience-${index}`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
+            className="w-full"
+          >
+            <GlassSurface
+              width="100%"
+              height="auto"
+              borderRadius={16}
+              displace={5}
+              opacity={0.9}
+              blur={25}
+              className="p-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-start justify-between mb-6">
+                <div className="flex items-center mb-4 md:mb-0">
+                  <img
+                    src={exp.logo}
+                    alt={`${exp.company} 로고`}
+                    className="w-12 h-12 mr-4 rounded-lg object-contain"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-1">
+                      {exp.company}
+                    </h3>
+                    <p className="text-lg text-gray-300">{exp.position}</p>
+                  </div>
+                </div>
+              </div>
 
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">기술 스택</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-            <div className="bg-blue-50 p-3 rounded-lg">
-              <h4 className="font-medium text-blue-900">Frontend</h4>
-              <p className="text-sm text-blue-700">React, Next.js, TypeScript</p>
-            </div>
-            <div className="bg-green-50 p-3 rounded-lg">
-              <h4 className="font-medium text-green-900">Backend</h4>
-              <p className="text-sm text-green-700">Node.js, Python, Go</p>
-            </div>
-            <div className="bg-purple-50 p-3 rounded-lg">
-              <h4 className="font-medium text-purple-900">Database</h4>
-              <p className="text-sm text-purple-700">PostgreSQL, MongoDB</p>
-            </div>
-          </div>
+              <div className="mb-4">
+                <div className="space-y-2">
+                  {exp.teams.map((team, teamIndex) => (
+                    <div
+                      key={`${uniqueId}-team-${index}-${teamIndex}`}
+                      className="flex flex-col md:flex-row md:items-center justify-between p-3 bg-white/5 rounded-lg"
+                    >
+                      <p className="text-sm text-gray-300">{team.name}</p>
+                      <p className="text-xs text-gray-400 mt-1 md:mt-0">
+                        {formatDate(team.startDate)} -{" "}
+                        {team.endDate ? formatDate(team.endDate) : "현재"}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">연락처</h3>
-          <div className="space-y-2">
-            <p className="text-gray-600">
-              <strong>이메일:</strong> contact@pureum.me
-            </p>
-            <p className="text-gray-600">
-              <strong>GitHub:</strong>{" "}
-              <a href="https://github.com/pureum" className="text-blue-600 hover:text-blue-800">
-                github.com/pureum
-              </a>
-            </p>
-          </div>
-        </div>
+              <div className="flex flex-col md:flex-row md:items-center justify-between pt-4 ">
+                <div className="text-gray-300">
+                  <p className="text-sm">
+                    {formatDate(exp.startDate)} -{" "}
+                    {exp.endDate ? formatDate(exp.endDate) : "현재"}
+                  </p>
+                </div>
+                <div className="text-right mt-2 md:mt-0">
+                  <p className="text-sm font-medium text-white">
+                    {calculateDuration(exp.startDate, exp.endDate)}
+                  </p>
+                </div>
+              </div>
+            </GlassSurface>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
