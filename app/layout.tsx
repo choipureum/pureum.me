@@ -27,6 +27,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={pretendard.variable}>
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+      <link
+        href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css"
+        rel="stylesheet"
+        type="text/css"
+      />
       <body className={`bg-primary ${pretendard.className}`}>
         <ClickSpark
           sparkColor="#FFF"

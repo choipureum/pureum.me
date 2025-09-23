@@ -21,7 +21,7 @@ export default function ScrollIndicator() {
   }, []);
 
   const scrollToNext = () => {
-    const nextSection = document.querySelector("[data-section='tech-stack']");
+    const nextSection = document.querySelector("[data-section='about']");
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }

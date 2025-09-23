@@ -38,6 +38,10 @@ body {
     animation: gradient-shift 3s ease-in-out infinite;
   }
 
+  .tossface {
+    font-family: Tossface;
+  }
+
   @keyframes gradient-shift {
     0%,
     100% {

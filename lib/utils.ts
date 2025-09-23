@@ -125,3 +125,19 @@ export function formatDate(date: Date): string {
     .toString()
     .padStart(2, "0")}월`;
 }
+
+/**
+ * 현재 연도를 가져옵니다.
+ * @returns 현재 연도 (숫자)
+ */
+export function getCurrentYear(): number {
+  return new Date().getFullYear();
+}
+
+/**
+ * 현재 연도를 문자열로 가져옵니다.
+ * @returns 현재 연도 (문자열)
+ */
+export function getCurrentYearString(): string {
+  return new Date().getFullYear().toString();
+}

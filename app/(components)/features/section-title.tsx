@@ -41,9 +41,7 @@ export default function SectionTitle({
                 delay: index * 0.1,
                 ease: "easeInOut",
               }}
-              className={`mr-2 inline-block ${
-                isHighlighted ? "gradient-text" : ""
-              }`}
+              className={`mr-2 inline-block ${isHighlighted ? "gradient-text" : ""}`}
             >
               {word}
             </motion.span>

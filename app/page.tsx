@@ -2,7 +2,6 @@
 
 import ScrollIndicator from "@/app/(components)/common/scroll-indicator";
 import SectionTitle from "@/app/(components)/features/section-title";
-import TechStack from "@/app/(components)/features/tech-stack";
 import {
   getFormattedYearsOfExperience,
   scrollToHashSection,
@@ -10,6 +9,8 @@ import {
 import { useEffect } from "react";
 import About from "./about/page";
 import Projects from "./projects/page";
+import Footer from "@/app/(components)/layout/footer";
+import TechStack from "@/app/(components)/features/tech-stack";
 
 export default function Home() {
   const formattedYears = getFormattedYearsOfExperience();
@@ -36,16 +37,20 @@ export default function Home() {
         <ScrollIndicator />
       </section>
 
-      <section id="tech-stack">
-        <TechStack />
-      </section>
-
       <section id="about">
         <About />
       </section>
 
       <section id="projects">
         <Projects />
+      </section>
+
+      <section id="footer" className="min-h-80 justify-center relative">
+        <Footer />
+      </section>
+
+      <section id="tech-stack">
+        <TechStack />
       </section>
     </div>
   );
