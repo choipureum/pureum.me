@@ -40,7 +40,7 @@ export default function ScrollIndicator() {
     >
       <motion.button
         onClick={scrollToNext}
-        className="flex flex-col items-center text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-300 group"
+        className="flex flex-col items-center text-slate-400 dark:text-slate-400 hover:text-slate-200 dark:hover:text-slate-200 transition-colors duration-300 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >

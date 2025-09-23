@@ -58,26 +58,16 @@ const Copyright = () => (
 
 export default function Footer() {
   return (
-    <div
-      id="about"
-      data-section="about"
-      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"
-    >
+    <div id="about" data-section="about" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <div className="text-center">
         <div className="flex justify-center items-center px-4">
           <div className="text-4xl mx-auto font-normal text-neutral-200">
-            {CONTACT_INFO.title}{" "}
-            <TossfaceText>{CONTACT_INFO.emoji}</TossfaceText>
+            {CONTACT_INFO.title} <TossfaceText>{CONTACT_INFO.emoji}</TossfaceText>
           </div>
         </div>
         <div className="flex justify-center items-center px-4 mt-12 gap-6">
           {SOCIAL_LINKS.map((link) => (
-            <SocialLink
-              key={link.label}
-              href={link.href}
-              icon={link.icon}
-              label={link.label}
-            />
+            <SocialLink key={link.label} href={link.href} icon={link.icon} label={link.label} />
           ))}
         </div>
       </div>

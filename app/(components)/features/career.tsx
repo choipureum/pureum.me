@@ -216,7 +216,7 @@ export default function Career() {
               6-10기 FE Organizer로 근무하며 6-10기 프로젝트 개발 및 관리를 담당했습니다."
             />
             <div className="flex flex-col gap-2 mt-[-24px]">
-              <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
+              <p className="text-sm font-normal text-neutral-200 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
                   - DDD 8기 웹 3팀 : EXIT<TossfaceText>🔐</TossfaceText> - 방
                   탈출 카페정보 & 추천 서비스 FE 개발
@@ -227,7 +227,7 @@ export default function Career() {
                 />
               </p>
 
-              <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
+              <p className="text-sm font-normal text-neutral-200 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
                   - DDD 9기 웹 2팀 : Rainbow<TossfaceText>🌈</TossfaceText> -
                   지출 공유 서비스 FE 개발
@@ -249,7 +249,7 @@ export default function Career() {
               description="디프만 : 개발자 X 디자이너 간 연합 동아리로 11기 프로젝트 FE 개발을 담당했습니다."
             />
             <div className="flex flex-col gap-2 mt-[-24px]">
-              <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
+              <p className="text-sm font-normal text-neutral-200 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
                   - <TossfaceText>📈</TossfaceText> 개미는툰툰{" "}
                   <TossfaceText>🐜</TossfaceText> : 웹툰 독자를 위한 커뮤니티
@@ -286,7 +286,7 @@ export default function Career() {
             <code className="text-sm">
               팩트체커(Fact Checker) :: 페이크 뉴스 탐지 서비스
             </code>
-            <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
+            <p className="text-sm font-normal text-neutral-200 md:text-sm dark:text-neutral-200 flex items-center gap-2">
               <span>- News</span>{" "}
               <ExternalLink
                 href="https://hanghae99.spartaclub.kr/blog/%EB%AC%B4%EB%B0%95-2%EC%9D%BC%EA%B0%84%EC%9D%98-%EC%97%B4%EC%A0%95%EC%9C%BC%EB%A1%9C-%ED%83%84%EC%83%9D%ED%95%9C-ai-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4--21990#%EC%B5%9C%EC%9A%B0%EC%88%98%EC%83%81_%ED%8E%98%EC%9D%B4%ED%81%AC_%EB%89%B4%EC%8A%A4_%ED%83%90%EC%A7%80_%EC%84%9C%EB%B9%84%EC%8A%A4_fact_checker_1"
@@ -360,7 +360,7 @@ export default function Career() {
               team="azure-functions-openapi-extension"
             />
             <div className="flex flex-col gap-2 mt-[-24px]">
-              <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
+              <p className="text-sm font-normal text-neutral-200 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
                   - azure-functions-openapi-extension의 0.9.0 version 개발
                 </span>{" "}
@@ -392,7 +392,7 @@ export default function Career() {
               team="Korean Translator"
             />
             <div className="flex flex-col gap-2 mt-[-24px]">
-              <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
+              <p className="text-sm font-normal text-neutral-200 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
                   Data-Science-For-Beginners 한국어 번역에 참여하였습니다.
                 </span>
@@ -436,7 +436,7 @@ export default function Career() {
               6-10기 FE Organizer로 근무하며 6-10기 프로젝트 개발 및 관리를 담당했습니다."
             />
             <div className="flex flex-col gap-2 mt-[-24px]">
-              <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
+              <p className="text-sm font-normal text-neutral-200 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
                   - DDD 6기: 공연 티켓 공유 서비스{" "}
                   <TossfaceText>🥨</TossfaceText> BE 개발
@@ -469,7 +469,7 @@ export default function Career() {
           <div className="flex flex-col gap-2 mb-12">
             <p className="text-md font-normal text-neutral-200 md:text-md">
               <b>Australia Working Holiday</b> <br />
-              <p className="text-sm text-neutral-600 dark:text-neutral-300">
+              <p className="text-sm text-neutral-300 dark:text-neutral-300">
                 2016.02 -2016.09
               </p>
             </p>

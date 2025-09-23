@@ -26,7 +26,7 @@ export default function SectionTitle({
           duration: 0.6,
           ease: "easeInOut",
         }}
-        className="relative z-10 mx-auto max-w-4xl text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300"
+        className="relative z-10 mx-auto max-w-4xl text-2xl font-bold text-slate-300 md:text-4xl lg:text-7xl dark:text-slate-300"
       >
         {title.split(" ").map((word, index) => {
           const isHighlighted = highlightText && word.includes(highlightText);
@@ -41,7 +41,9 @@ export default function SectionTitle({
                 delay: index * 0.1,
                 ease: "easeInOut",
               }}
-              className={`mr-2 inline-block ${isHighlighted ? "gradient-text" : ""}`}
+              className={`mr-2 inline-block ${
+                isHighlighted ? "gradient-text" : ""
+              }`}
             >
               {word}
             </motion.span>
@@ -57,7 +59,7 @@ export default function SectionTitle({
             duration: 0.6,
             delay: 1,
           }}
-          className="relative z-10 mx-auto max-w-2xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-300"
+          className="relative z-10 mx-auto max-w-2xl py-4 text-center text-lg font-normal text-neutral-300"
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
       )}
