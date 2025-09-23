@@ -143,11 +143,21 @@ export const CompanyInfo = ({
           width={40}
           height={40}
           className="w-10 h-10 rounded-lg object-cover"
+          priority={false}
+          quality={90}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
         <div>
           <div className="flex items-center gap-2">
             <h4 className="text-lg font-bold text-neutral-200">{company}</h4>
-            {url && <ExternalLink href={url} useFlipWords={true} flipWords={["move", "url"]} />}
+            {url && (
+              <ExternalLink
+                href={url}
+                useFlipWords={true}
+                flipWords={["move", "url"]}
+              />
+            )}
           </div>
           <p className="text-sm text-neutral-300">
             {position} · {team}

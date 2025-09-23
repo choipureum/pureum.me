@@ -41,9 +41,26 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-12 left-1/2 transform -translate-x-1/2 w-[95vw] sm:w-[80vw] max-w-[1200px] h-16 z-999">
-      <GlassSurface width="100%" height={68} borderRadius={24} displace={5} opacity={1} blur={30}>
+      <GlassSurface
+        width="100%"
+        height={68}
+        borderRadius={24}
+        displace={3}
+        opacity={1}
+        blur={20}
+      >
         <div className="flex items-center justify-between w-full h-full px-2 sm:px-6 pointer-events-auto">
-          <Image src="/icon.png" alt="logo" width={28} height={28} className="sm:w-8 sm:h-8" />
+          <Image
+            src="/icon.png"
+            alt="logo"
+            width={28}
+            height={28}
+            className="sm:w-8 sm:h-8"
+            priority={true}
+            quality={95}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+          />
 
           <div className="relative flex items-center space-x-1 sm:space-x-2">
             {items.map((item, index) => (
@@ -51,7 +68,9 @@ const Navbar = () => {
                 key={item.label}
                 href={item.href}
                 className={`cursor-pointer relative z-20 flex items-center justify-center h-10 sm:h-12 px-2 sm:px-6 rounded-[16px] sm:rounded-[20px] transition-all duration-300 pointer-events-auto text-xs sm:text-base ${
-                  activeIndex === index ? "gradient-text" : "text-white hover:text-gray-300"
+                  activeIndex === index
+                    ? "gradient-text"
+                    : "text-white hover:text-gray-300"
                 }`}
                 onClick={(e) => {
                   if (item.scroll) {

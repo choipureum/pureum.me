@@ -20,9 +20,13 @@ export const DirectionAwareHover = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const [direction, setDirection] = useState<"top" | "bottom" | "left" | "right" | string>("left");
+  const [direction, setDirection] = useState<
+    "top" | "bottom" | "left" | "right" | string
+  >("left");
 
-  const handleMouseEnter = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMouseEnter = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     if (!ref.current) return;
 
     const direction = getDirection(event, ref.current);
@@ -46,7 +50,10 @@ export const DirectionAwareHover = ({
     }
   };
 
-  const getDirection = (ev: React.MouseEvent<HTMLDivElement, MouseEvent>, obj: HTMLElement) => {
+  const getDirection = (
+    ev: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    obj: HTMLElement
+  ) => {
     const { width: w, height: h, left, top } = obj.getBoundingClientRect();
     const x = ev.clientX - left - (w / 2) * (w > h ? h / w : 1);
     const y = ev.clientY - top - (h / 2) * (h > w ? w / h : 1);
@@ -82,12 +89,16 @@ export const DirectionAwareHover = ({
             <Image
               alt="image"
               className={cn(
-                "w-full  scale-[1.15] h-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60",
+                "w-full scale-[1.15] h-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60",
                 imageClassName
               )}
-              width="500"
-              height="500"
+              width={500}
+              height={500}
               src={imageUrl}
+              priority={false}
+              quality={85}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />
           </motion.div>
           <motion.div
@@ -96,7 +107,10 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("text-white absolute bottom-4 left-4 z-40", childrenClassName)}
+            className={cn(
+              "text-white absolute bottom-4 left-4 z-40",
+              childrenClassName
+            )}
           >
             {children}
           </motion.div>
