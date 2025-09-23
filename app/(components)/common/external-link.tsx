@@ -20,7 +20,7 @@ export const ExternalLink = ({
   showIcon = true,
   iconText = "🔗",
   useFlipWords = false,
-  flipWords = ["move", "url"],
+  flipWords = ["Move", "Link"],
 }: ExternalLinkProps) => {
   return (
     <a
@@ -33,7 +33,7 @@ export const ExternalLink = ({
       {useFlipWords ? (
         <FlipWords
           words={flipWords}
-          className="text-sm text-blue-300 hover:text-blue-500 transition-colors"
+          className="text-sm text-blue-300 dark:text-blue-300 hover:text-blue-500 transition-colors"
         />
       ) : (
         children
