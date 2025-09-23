@@ -41,14 +41,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-12 left-1/2 transform -translate-x-1/2 w-[95vw] sm:w-[80vw] max-w-[1200px] h-16 z-999">
-      <GlassSurface
-        width="100%"
-        height={68}
-        borderRadius={24}
-        displace={3}
-        opacity={1}
-        blur={20}
-      >
+      <GlassSurface width="100%" height={68} borderRadius={24} displace={3} opacity={1} blur={20}>
         <div className="flex items-center justify-between w-full h-full px-2 sm:px-6 pointer-events-auto">
           <Image
             src="/icon.png"
@@ -68,9 +61,7 @@ const Navbar = () => {
                 key={item.label}
                 href={item.href}
                 className={`cursor-pointer relative z-20 flex items-center justify-center h-10 sm:h-12 px-2 sm:px-6 rounded-[16px] sm:rounded-[20px] transition-all duration-300 pointer-events-auto text-xs sm:text-base ${
-                  activeIndex === index
-                    ? "gradient-text"
-                    : "text-white hover:text-gray-300"
+                  activeIndex === index ? "gradient-text" : "text-white hover:text-gray-300"
                 }`}
                 onClick={(e) => {
                   if (item.scroll) {
