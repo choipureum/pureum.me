@@ -57,7 +57,7 @@ export default function RootLayout({
         rel="stylesheet"
         type="text/css"
       />
-      <body className={`bg-primary ${pretendard.className}`}>
+      <body className={`bg-primary overflow-x-hidden ${pretendard.className}`}>
         <ClickSpark
           sparkColor="#FFF"
           sparkSize={10}
@@ -66,7 +66,7 @@ export default function RootLayout({
           extraScale={0.8}
           duration={400}
         >
-          <main className="min-h-screen relative bg-primary overflow-x-hidden">
+          <main className="min-h-screen relative bg-primary">
             <div className="fixed inset-0 w-full h-full" style={{ filter: "brightness(0.6)" }}>
               <Prism
                 animationType="rotate"
