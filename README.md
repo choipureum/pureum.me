@@ -4,15 +4,15 @@ my personal website by choipuruem
 <br/>
 
 <div>
-<a href="https://vercel.com/choipureum/pureum.me">
-<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
-</a>
-<a href="https://github.com/choipureum/pureum.me/deployments">
-<img src="https://img.shields.io/github/deployments/choipureum/pureum.me/production?label=deployment&logo=vercel&logoColor=white&style=flat-square" alt="Vercel Status" />
-</a>
+    <a href="https://vercel.com/choipureum/pureum.me">
+    <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+    </a>
+    <a href="https://github.com/choipureum/pureum.me/deployments">
+    <img src="https://img.shields.io/github/deployments/choipureum/pureum.me/production?label=deployment&logo=vercel&logoColor=white&style=flat-square" alt="Vercel Status" />
+    </a>
 </div>
 
-<div align="center">
+<div align="left">
   <img src="./public/pureum-main.png" alt="Pureum.me Preview" width="500" />
 </div>
 
