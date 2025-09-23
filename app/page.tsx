@@ -2,10 +2,7 @@
 
 import ScrollIndicator from "@/app/(components)/common/scroll-indicator";
 import SectionTitle from "@/app/(components)/features/section-title";
-import {
-  getFormattedYearsOfExperience,
-  scrollToHashSection,
-} from "@/lib/utils";
+import { getFormattedYearsOfExperience, scrollToHashSection } from "@/lib/utils";
 import { useEffect } from "react";
 import About from "./about/page";
 import Projects from "./projects/page";
@@ -25,10 +22,7 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <section
-        id="home"
-        className="min-h-screen flex items-center justify-center relative"
-      >
+      <section id="home" className="min-h-screen flex items-center justify-center relative">
         <SectionTitle
           title="Hello, I'm Pureum Choi. Frontend developer."
           subtitle={subtitle}

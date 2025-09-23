@@ -5,10 +5,42 @@ import Navbar from "@/app/(components)/layout/navbar";
 import { pretendard } from "./fonts/pretendard";
 import GradualBlur from "@/app/(components)/animations/GradualBulr";
 import ClickSpark from "@/app/(components)/animations/ClickSpark";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Pureum.me",
-  description: "Personal website of Pureum Choi",
+  description: "Personal website of Pureum Choi - Frontend Developer",
+  keywords: [
+    "Frontend Developer",
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Portfolio",
+  ],
+  authors: [{ name: "Choi Pureum" }],
+  creator: "Choi Pureum",
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: "https://pureum.me",
+    title: "Pureum.me - Frontend Developer",
+    description: "Personal website of Pureum Choi - Frontend Developer",
+    siteName: "Pureum.me",
+    images: [
+      {
+        url: "/pureum-main.png",
+        width: 1200,
+        height: 630,
+        alt: "Pureum.me - Frontend Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pureum.me - Frontend Developer",
+    description: "Personal website of Pureum Choi - Frontend Developer",
+    images: ["/pureum-main.png"],
+  },
   icons: {
     icon: [
       { url: "/icon.png", sizes: "32x32", type: "image/png" },
@@ -26,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={pretendard.variable}>
+    <html lang="ko" className={`${pretendard.variable} dark`}>
       <link rel="preconnect" href="https://cdn.jsdelivr.net" />
       <link
         href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css"
@@ -77,6 +109,7 @@ export default function RootLayout({
             </div>
           </main>
         </ClickSpark>
+        <Analytics />
       </body>
     </html>
   );

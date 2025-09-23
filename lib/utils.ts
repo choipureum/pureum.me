@@ -15,8 +15,7 @@ export function calculateYearsOfExperience(): number {
   const currentDate = new Date();
   const yearsOfExperience = currentDate.getFullYear() - startDate.getFullYear();
 
-  const adjustedYears =
-    currentDate.getMonth() < 10 ? yearsOfExperience - 1 : yearsOfExperience;
+  const adjustedYears = currentDate.getMonth() < 10 ? yearsOfExperience - 1 : yearsOfExperience;
 
   return adjustedYears + 1;
 }
@@ -46,11 +45,7 @@ export function getFormattedYearsOfExperience(): string {
  * @param suffix 추가 식별자 (선택사항)
  * @returns 고유한 키 문자열
  */
-export function generateUniqueKey(
-  prefix: string,
-  index: number,
-  suffix?: string
-): string {
+export function generateUniqueKey(prefix: string, index: number, suffix?: string): string {
   const randomSuffix = Math.random().toString(36).substr(2, 9);
   const parts = [prefix, index.toString(), randomSuffix];
   if (suffix) {
@@ -64,10 +59,7 @@ export function generateUniqueKey(
  * @param sectionId - 스크롤할 섹션의 ID (예: "home", "about")
  * @param smooth - 부드러운 스크롤 여부 (기본값: true)
  */
-export function scrollToSection(
-  sectionId: string,
-  smooth: boolean = true
-): void {
+export function scrollToSection(sectionId: string, smooth: boolean = true): void {
   const element = document.querySelector(`#${sectionId}`);
   if (element) {
     element.scrollIntoView({
@@ -96,10 +88,7 @@ export function scrollToHashSection(delay: number = 100): void {
  * @param endDate - 종료 날짜 (null이면 현재까지)
  * @returns "X년 Y개월" 형식의 문자열
  */
-export function calculateDuration(
-  startDate: Date,
-  endDate: Date | null
-): string {
+export function calculateDuration(startDate: Date, endDate: Date | null): string {
   const end = endDate || new Date();
   const diffTime = Math.abs(end.getTime() - startDate.getTime());
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -121,9 +110,7 @@ export function calculateDuration(
  * @returns "YYYY년 MM월" 형식의 문자열
  */
 export function formatDate(date: Date): string {
-  return `${date.getFullYear()}년 ${(date.getMonth() + 1)
-    .toString()
-    .padStart(2, "0")}월`;
+  return `${date.getFullYear()}년 ${(date.getMonth() + 1).toString().padStart(2, "0")}월`;
 }
 
 /**

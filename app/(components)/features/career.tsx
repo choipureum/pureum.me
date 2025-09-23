@@ -47,8 +47,7 @@ export default function Career() {
               <TossfaceText>✅</TossfaceText> 기획 / 디자인 / FE개발 담당
             </div>
             <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-              <TossfaceText>✅</TossfaceText> 개발기간 :{" "}
-              <b>2025.01 ~ 2025.08</b>
+              <TossfaceText>✅</TossfaceText> 개발기간 : <b>2025.01 ~ 2025.08</b>
             </div>
             <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
               <TossfaceText>✅</TossfaceText> DAU <b>200명</b> 이상 사내 서비스
@@ -57,8 +56,7 @@ export default function Career() {
               <TossfaceText>✅</TossfaceText> E2E 테스트 자동화 및 버전 관리
             </div>
             <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-              <TossfaceText>✅</TossfaceText> 게임 컨텐츠 인사이트 데이터 분석
-              및 시각화
+              <TossfaceText>✅</TossfaceText> 게임 컨텐츠 인사이트 데이터 분석 및 시각화
             </div>
           </div>
 
@@ -75,13 +73,12 @@ export default function Career() {
 
           <div className="flex flex-col gap-2 mt-12">
             <p className="text-md font-normal text-neutral-800 md:text-md dark:text-neutral-200">
-              <b>특허 출원 </b> (
-              <code>출원번호 10-2025-0127742&nbsp;출원일 2025.09.08</code>)
+              <b>특허 출원 </b> (<code>출원번호 10-2025-0127742&nbsp;출원일 2025.09.08</code>)
             </p>
             <code className="text-sm">
-              게임 모드를 전환하기 위한 전자 장치, 방법, 및 비일시적 컴퓨터
-              판독가능 저장 매체(Electronic device, method, and non-transitory
-              computer readable storage medium for switching game modes)
+              게임 모드를 전환하기 위한 전자 장치, 방법, 및 비일시적 컴퓨터 판독가능 저장
+              매체(Electronic device, method, and non-transitory computer readable storage medium
+              for switching game modes)
             </code>
 
             <div className="grid grid-cols-2 gap-4 mt-4">
@@ -131,12 +128,12 @@ export default function Career() {
           </p>
           <div className="mb-8">
             <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-              <TossfaceText>✅</TossfaceText> 웹 서비스 제작에서 주 사용 기능을
-              공통화 및 모듈화한 FE개발 Library
+              <TossfaceText>✅</TossfaceText> 웹 서비스 제작에서 주 사용 기능을 공통화 및 모듈화한
+              FE개발 Library
             </div>
             <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-              <TossfaceText>✅</TossfaceText> 브랜드 웹 1개당 개발기간 기존{" "}
-              <b>7일에서 1-2일</b>로 대폭 단축
+              <TossfaceText>✅</TossfaceText> 브랜드 웹 1개당 개발기간 기존 <b>7일에서 1-2일</b>로
+              대폭 단축
             </div>
             <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
               <TossfaceText>✅</TossfaceText> 외주사 및 관계사에 해당 라이브러리
@@ -177,20 +174,19 @@ export default function Career() {
 
             <div className="mb-8">
               <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-                <TossfaceText>✅</TossfaceText> <code>GSAP</code> 과{" "}
-                <code>KIT</code> 을 통한 마케팅 페이지 개발 (20건 이상)
+                <TossfaceText>✅</TossfaceText> <code>GSAP</code> 과 <code>KIT</code> 을 통한 마케팅
+                페이지 개발 (20건 이상)
               </div>
               <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-                <TossfaceText>✅</TossfaceText> 사전예약시 <b>800만</b>명 이상
-                유저 활동
+                <TossfaceText>✅</TossfaceText> 사전예약시 <b>800만</b>명 이상 유저 활동
               </div>
               <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-                <TossfaceText>✅</TossfaceText> <code>i18n</code> 지원을 통한
-                다국어 지원(<b>20</b>개 이상의 국가/언어 지원)
+                <TossfaceText>✅</TossfaceText> <code>i18n</code> 지원을 통한 다국어 지원(<b>20</b>
+                개 이상의 국가/언어 지원)
               </div>
               <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-                <TossfaceText>✅</TossfaceText> 다양한 프로모션 및 브랜드웹을
-                기획자의 의도에 맞게 개발 및 배포
+                <TossfaceText>✅</TossfaceText> 다양한 프로모션 및 브랜드웹을 기획자의 의도에 맞게
+                개발 및 배포
               </div>
             </div>
 
@@ -218,8 +214,8 @@ export default function Career() {
             <div className="flex flex-col gap-2 mt-[-24px]">
               <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
-                  - DDD 8기 웹 3팀 : EXIT<TossfaceText>🔐</TossfaceText> - 방
-                  탈출 카페정보 & 추천 서비스 FE 개발
+                  - DDD 8기 웹 3팀 : EXIT<TossfaceText>🔐</TossfaceText> - 방 탈출 카페정보 & 추천
+                  서비스 FE 개발
                 </span>{" "}
                 <ExternalLink
                   href="https://github.com/DDD-Community/jsonWeb-front"
@@ -229,8 +225,8 @@ export default function Career() {
 
               <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
-                  - DDD 9기 웹 2팀 : Rainbow<TossfaceText>🌈</TossfaceText> -
-                  지출 공유 서비스 FE 개발
+                  - DDD 9기 웹 2팀 : Rainbow<TossfaceText>🌈</TossfaceText> - 지출 공유 서비스 FE
+                  개발
                 </span>{" "}
                 <ExternalLink
                   href="https://github.com/DDD-Community/Rainbow-Web"
@@ -251,14 +247,10 @@ export default function Career() {
             <div className="flex flex-col gap-2 mt-[-24px]">
               <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
-                  - <TossfaceText>📈</TossfaceText> 개미는툰툰{" "}
-                  <TossfaceText>🐜</TossfaceText> : 웹툰 독자를 위한 커뮤니티
-                  플랫폼 FE 개발
+                  - <TossfaceText>📈</TossfaceText> 개미는툰툰 <TossfaceText>🐜</TossfaceText> :
+                  웹툰 독자를 위한 커뮤니티 플랫폼 FE 개발
                 </span>{" "}
-                <ExternalLink
-                  href="https://github.com/depromeet/antoon-web"
-                  useFlipWords={true}
-                />
+                <ExternalLink href="https://github.com/depromeet/antoon-web" useFlipWords={true} />
               </p>
             </div>
           </div>
@@ -270,9 +262,7 @@ export default function Career() {
             </DirectionAwareHover>
             <DirectionAwareHover imageUrl={"/project/json-web.png"}>
               <p className="font-bold text-xl">DDD Project</p>
-              <p className="font-normal text-sm">
-                EXIT :: Excape Room Community
-              </p>
+              <p className="font-normal text-sm">EXIT :: Excape Room Community</p>
             </DirectionAwareHover>
           </div>
 
@@ -283,9 +273,7 @@ export default function Career() {
                 <TossfaceText>🏆</TossfaceText> <b>최우수상</b> 수상
               </code>
             </p>
-            <code className="text-sm">
-              팩트체커(Fact Checker) :: 페이크 뉴스 탐지 서비스
-            </code>
+            <code className="text-sm">팩트체커(Fact Checker) :: 페이크 뉴스 탐지 서비스</code>
             <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
               <span>- News</span>{" "}
               <ExternalLink
@@ -310,9 +298,8 @@ export default function Career() {
             techStack={["C#", ".NET", "Vue", "JavaScript", "SQL Server"]}
           />
           <p className="mb-4 text-md font-normal text-neutral-800 md:text-md dark:text-neutral-200">
-            웹뷰 기반의 MBC 앱,Corp 페이지, MBC 아카이브, 미니등과 같은 서비스와
-            다수의 선거,올림픽,TV 방송의 페이지 닷넷기반 BE,Vue 기반 FE 개발을
-            맡았습니다.{" "}
+            웹뷰 기반의 MBC 앱,Corp 페이지, MBC 아카이브, 미니등과 같은 서비스와 다수의
+            선거,올림픽,TV 방송의 페이지 닷넷기반 BE,Vue 기반 FE 개발을 맡았습니다.{" "}
             <ExternalLink
               href="https://play.google.com/store/apps/details?id=com.imbc.downloadapp&hl=ko"
               useFlipWords={true}
@@ -361,9 +348,7 @@ export default function Career() {
             />
             <div className="flex flex-col gap-2 mt-[-24px]">
               <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
-                <span>
-                  - azure-functions-openapi-extension의 0.9.0 version 개발
-                </span>{" "}
+                <span>- azure-functions-openapi-extension의 0.9.0 version 개발</span>{" "}
                 <ExternalLink
                   href="https://github.com/Azure/azure-functions-openapi-extension"
                   useFlipWords={true}
@@ -378,8 +363,7 @@ export default function Career() {
                 ✅ 1778개의 Unit Test 추가 및 531개 통합테스트 추가
               </div>
               <div className="flex items-center gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-                ✅ Hacktoberfest 2021 참여 및 도전과제 완수(25 pull request / 12
-                merge)
+                ✅ Hacktoberfest 2021 참여 및 도전과제 완수(25 pull request / 12 merge)
               </div>
             </div>
           </div>
@@ -393,9 +377,7 @@ export default function Career() {
             />
             <div className="flex flex-col gap-2 mt-[-24px]">
               <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
-                <span>
-                  Data-Science-For-Beginners 한국어 번역에 참여하였습니다.
-                </span>
+                <span>Data-Science-For-Beginners 한국어 번역에 참여하였습니다.</span>
                 <ExternalLink
                   href="https://github.com/microsoft/Data-Science-For-Beginners/pull/167"
                   useFlipWords={true}
@@ -415,8 +397,7 @@ export default function Career() {
             <div className="flex flex-col gap-2 mt-[-24px]">
               <p className="flex items-center gap-2 text-md font-normal text-neutral-800 md:text-md dark:text-neutral-200">
                 <code>
-                  <TossfaceText>🏆</TossfaceText> <b>정보통신산업진흥원장상</b>{" "}
-                  수상
+                  <TossfaceText>🏆</TossfaceText> <b>정보통신산업진흥원장상</b> 수상
                 </code>
                 <ExternalLink
                   href="https://file.notion.so/f/f/7d919b60-5b1c-4539-ab7a-2fcf77912e4a/e4b4d2c2-5063-4567-9c0d-3fbf8b7cbb74/Azure_Functions_OpenAPI_Extension_Final_Presentation.pdf?table=block&id=0a3d2dc4-4ab1-4530-9c87-a89203209495&spaceId=7d919b60-5b1c-4539-ab7a-2fcf77912e4a&expirationTimestamp=1758636000000&signature=pbt3PyN1Eno1BmZ7otA29anvCgnpkt63aFjdmJia3ZM&downloadName=Azure_Functions_OpenAPI_Extension_Final_Presentation.pdf"
@@ -438,8 +419,7 @@ export default function Career() {
             <div className="flex flex-col gap-2 mt-[-24px]">
               <p className="text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200 flex items-center gap-2">
                 <span>
-                  - DDD 6기: 공연 티켓 공유 서비스{" "}
-                  <TossfaceText>🥨</TossfaceText> BE 개발
+                  - DDD 6기: 공연 티켓 공유 서비스 <TossfaceText>🥨</TossfaceText> BE 개발
                 </span>{" "}
                 <ExternalLink
                   href="https://github.com/DDD-Community/CultureShock-Server"
@@ -469,9 +449,7 @@ export default function Career() {
           <div className="flex flex-col gap-2 mb-12">
             <p className="text-md font-normal text-neutral-800 md:text-md dark:text-neutral-200">
               <b>Australia Working Holiday</b> <br />
-              <p className="text-sm text-neutral-600 dark:text-neutral-300">
-                2016.02 -2016.09
-              </p>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300">2016.02 -2016.09</p>
             </p>
           </div>
           <CompanyInfo

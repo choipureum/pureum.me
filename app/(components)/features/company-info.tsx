@@ -91,25 +91,19 @@ const getTechColor = (techName: string) => {
     React: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     TypeScript: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     "Next.js": "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200",
-    "Tailwind CSS":
-      "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
-    Motion:
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+    "Tailwind CSS": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
+    Motion: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
     Vite: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-    JavaScript:
-      "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+    JavaScript: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
     CSS3: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     Webpack: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     Sass: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
     jQuery: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-    HTML5:
-      "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+    HTML5: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
     PHP: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-    MySQL:
-      "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+    MySQL: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
     MCP: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-    "RTK Query":
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+    "RTK Query": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
     MUI: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     Docker: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     Kubernetes: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
@@ -118,18 +112,14 @@ const getTechColor = (techName: string) => {
     Canvas: "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200",
     NPM: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
     "C#": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-    ".NET":
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-    "SQL Server":
-      "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+    ".NET": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+    "SQL Server": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     Husky: "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200",
     Commitlint: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     Jenkins: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-    Biome:
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+    Biome: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
     Pnpm: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
-    VitePress:
-      "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+    VitePress: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
   };
 
   return (
@@ -159,25 +149,15 @@ export const CompanyInfo = ({
         />
         <div>
           <div className="flex items-center gap-2">
-            <h4 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
-              {company}
-            </h4>
-            {url && (
-              <ExternalLink
-                href={url}
-                useFlipWords={true}
-                flipWords={["move", "url"]}
-              />
-            )}
+            <h4 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">{company}</h4>
+            {url && <ExternalLink href={url} useFlipWords={true} flipWords={["move", "url"]} />}
           </div>
           <p className="text-sm text-neutral-600 dark:text-neutral-300">
             {position} · {team}
           </p>
         </div>
       </div>
-      <p className="text-sm text-neutral-700 dark:text-neutral-300 mb-3">
-        {description}
-      </p>
+      <p className="text-sm text-neutral-700 dark:text-neutral-300 mb-3">{description}</p>
 
       {techStack.length > 0 && (
         <div className="flex flex-wrap gap-2">
