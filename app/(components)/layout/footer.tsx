@@ -38,7 +38,7 @@ const SocialLink = ({
 }) => (
   <ExternalLink
     href={href}
-    className="flex items-center gap-2 text-neutral-600 hover:text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-500 transition-colors"
+    className="flex items-center gap-2 text-neutral-300 hover:text-neutral-500 transition-colors"
     showIcon={false}
   >
     <Icon className="w-6 h-6" />
@@ -47,9 +47,9 @@ const SocialLink = ({
 );
 
 const Copyright = () => (
-  <div className="mt-8 pt-4 dark:border-neutral-700">
+  <div className="mt-8 pt-4 border-neutral-700">
     <div className="text-center">
-      <p className="text-md text-neutral-500 dark:text-neutral-400">
+      <p className="text-md text-neutral-400">
         © {getCurrentYear()} {CONTACT_INFO.copyright}. All rights reserved.
       </p>
     </div>
@@ -58,16 +58,26 @@ const Copyright = () => (
 
 export default function Footer() {
   return (
-    <div id="about" data-section="about" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div
+      id="about"
+      data-section="about"
+      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"
+    >
       <div className="text-center">
         <div className="flex justify-center items-center px-4">
-          <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-200">
-            {CONTACT_INFO.title} <TossfaceText>{CONTACT_INFO.emoji}</TossfaceText>
+          <div className="text-4xl mx-auto font-normal text-neutral-200">
+            {CONTACT_INFO.title}{" "}
+            <TossfaceText>{CONTACT_INFO.emoji}</TossfaceText>
           </div>
         </div>
         <div className="flex justify-center items-center px-4 mt-12 gap-6">
           {SOCIAL_LINKS.map((link) => (
-            <SocialLink key={link.label} href={link.href} icon={link.icon} label={link.label} />
+            <SocialLink
+              key={link.label}
+              href={link.href}
+              icon={link.icon}
+              label={link.label}
+            />
           ))}
         </div>
       </div>

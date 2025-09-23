@@ -58,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${pretendard.variable} dark`}>
+    <html lang="ko" className={`${pretendard.variable}`}>
       <link rel="preconnect" href="https://cdn.jsdelivr.net" />
       <link
         href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css"
