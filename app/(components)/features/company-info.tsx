@@ -151,7 +151,13 @@ export const CompanyInfo = ({
         <div>
           <div className="flex items-center gap-2">
             <h4 className="text-lg font-bold text-neutral-200">{company}</h4>
-            {url && <ExternalLink href={url} useFlipWords={true} flipWords={["move", "url"]} />}
+            {url && (
+              <ExternalLink
+                href={url}
+                useFlipWords={true}
+                flipWords={["move", "url"]}
+              />
+            )}
           </div>
           <p className="text-sm text-neutral-300">
             {position} · {team}

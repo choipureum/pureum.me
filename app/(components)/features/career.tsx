@@ -69,6 +69,7 @@ export default function Career() {
             </DirectionAwareHover>
             <DirectionAwareHover imageUrl={"/project/gta-rank.png"}>
               <p className="font-bold text-md">Global Trend Analytics</p>
+
               <p className="font-normal text-sm">기획 / 디자인 / FE개발</p>
             </DirectionAwareHover>
           </div>
