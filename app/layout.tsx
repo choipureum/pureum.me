@@ -10,7 +10,13 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "Pureum.me",
   description: "Personal website of Pureum Choi - Frontend Developer",
-  keywords: ["Frontend Developer", "React", "TypeScript", "Next.js", "Portfolio"],
+  keywords: [
+    "Frontend Developer",
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Portfolio",
+  ],
   authors: [{ name: "Choi Pureum" }],
   creator: "Choi Pureum",
   openGraph: {
@@ -40,7 +46,9 @@ export const metadata: Metadata = {
       { url: "/icon.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
@@ -57,7 +65,7 @@ export default function RootLayout({
         rel="stylesheet"
         type="text/css"
       />
-      <body className={`bg-primary ${pretendard.className}`}>
+      <body className={`bg-primary ${pretendard.className} overflow-x-hidden`}>
         <ClickSpark
           sparkColor="#FFF"
           sparkSize={10}
@@ -67,7 +75,10 @@ export default function RootLayout({
           duration={400}
         >
           <main className="min-h-screen relative bg-primary overflow-x-hidden">
-            <div className="fixed inset-0 w-full h-full" style={{ filter: "brightness(0.6)" }}>
+            <div
+              className="fixed inset-0 w-full h-full"
+              style={{ filter: "brightness(0.6)" }}
+            >
               <Prism
                 animationType="rotate"
                 timeScale={0.5}
