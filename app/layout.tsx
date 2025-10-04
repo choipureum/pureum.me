@@ -74,7 +74,7 @@ export default function RootLayout({
           extraScale={0.8}
           duration={400}
         >
-          <main className="min-h-screen relative bg-primary overflow-x-hidden">
+          <main className="min-h-screen relative bg-primary">
             <div
               className="fixed inset-0 w-full h-full"
               style={{ filter: "brightness(0.6)" }}
